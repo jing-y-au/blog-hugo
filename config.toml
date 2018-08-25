@@ -1,11 +1,83 @@
-baseURL = "http://example.org/"
+baseurl = ""
+title = "Jing's Blog"
+theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "jeffprod"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+googleAnalytics = ""
+preserveTaxonomyNames = true
+paginate = 5 #frontpage pagination
+hasCJKLanguage = true
 
-[permalinks]
-    post = "/:year/:filename"
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
 
-[taxonomies]
-    tag = "tags"
-    archive = "archives"
+[params]
+  header_image = "img/home.jpg"
+  SEOTitle = "Jing's Blog | Jing's Blog"
+  description = ""
+  keyword = ""
+  slogan = "生命不息，折腾不止"
+
+  image_404 = "img/404-bg.jpg"
+  title_404 = "你来到了没有知识的荒原 :("
+
+  # leancloud storage for page view counter
+  page_view_conter = false
+  leancloud_app_id = ""
+  leancloud_app_key = ""
+
+  # algolia site search
+  algolia_search = false 
+  algolia_appId = ""
+  algolia_indexName = ""
+  algolia_apiKey = ""
+
+  # Sidebar settings
+  sidebar_about_description = "爱学习，爱分享"
+  # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = "img/avatar.jpg"      
+
+  featured_tags = true 
+  featured_condition_size = 2 
+
+  # Baidu Analytics
+  ba_track_id = ""
+  
+  # We need a proxy to access Disqus api in China
+  disqus_proxy = ""
+  disqus_site = ""
+
+  [params.social]
+  rss            = false 
+  email          = "jing.y.au@hotmail.com"
+  facebook       = "https://www.facebook.com/jing.yuan.111"
+  #googleplus    = "full profile url in googleplus"
+  #twitter       = "full profile url in twitter"
+  #linkedin       = "full profile url in linkedin"
+  #stackoverflow = "full profile url in stackoverflow"
+  #instagram     = "full profile url in instagram"
+  github         = "https://github.com/jingyuan-au"
+  #wechat         = "link of wechat QR code image"
+  #pinterest     = "full profile url in pinterest"
+  
+  # [[params.friend_link]]
+  # title = "Linda的博客"
+  # href =  "https://zhaozhihan.com"
+
+  [[params.bookmark_link]]
+  title = "莫烦 Python MachineLearning"
+  href =  "https://morvanzhou.github.io/"
+  [[params.bookmark_link]]
+  title =  "阮一峰的网络日志"
+  href =  "http://www.ruanyifeng.com/blog/"
+  
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"] 
