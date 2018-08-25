@@ -1,4 +1,4 @@
-baseurl = "jingyuan-au.github.io"
+baseurl = "/"
 title = "Jing's Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
