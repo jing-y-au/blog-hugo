@@ -3,7 +3,7 @@ title = "Jing's Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+disqusShortname = "blog-jbmi7btpkr.disqus.com"
 googleAnalytics = ""
 preserveTaxonomyNames = true
 paginate = 5 #frontpage pagination
@@ -14,7 +14,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/home.jpg"
-  SEOTitle = "Jing's Blog | Jing's Blog"
+  SEOTitle = "Jing's Blog"
   description = ""
   keyword = ""
   slogan = "生命不息，奋斗不止"
